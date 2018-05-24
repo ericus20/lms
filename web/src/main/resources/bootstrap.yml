@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: lms
+
+  cloud:
+    config:
+      label: lms
+      username: ericus20
+      password: Eo11351450
+      uri: https://hackstreetboys.ddns.net/config
+
+  profiles:
+    active: dev
+
+
+
+encrypt:
+  key: afrika
+
+
+
+
+

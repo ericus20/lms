@@ -1,0 +1,5 @@
+rootProject.name = 'lms'
+include 'persistence'
+include 'domain'
+include 'core'
+include 'web'

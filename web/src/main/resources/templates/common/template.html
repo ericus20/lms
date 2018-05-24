@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+<head th:fragment="common-head">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+    <!--Data Tables CSS-->
+    <link rel="stylesheet" th:href="@{/webjars/datatables/css/jquery.dataTables.min.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/webjars/datatables/css/dataTables.bootstrap.min.css}" type="text/css">
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="../../static/css/styles.css" th:href="@{/css/styles.css}">
+
+    <!--Form Validation-->
+    <link rel="stylesheet" href="../../static/css/formValidation.min.css" th:href="@{/css/formValidation.min.css}" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <title>.:: LMS ::.</title>
+
+</head>
+
+
+<body>
+
+
+
+
+
+    <div th:fragment="common-scripts">
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+        <script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js}"></script>
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
+        <!--data table-->
+        <script th:src="@{/webjars/datatables/js/jquery.dataTables.min.js}"></script>
+        <script th:src="@{/webjars/datatables/js/dataTables.bootstrap.min.js}"></script>
+
+        <!--Custom JavaScript-->
+        <script src="../../static/js/scripts.js" th:src="@{/js/scripts.js}"></script>
+        <script th:src="@{/js/formValidation.min.js}"></script>
+        <script th:src="@{/js/bootstrap.min.js}"></script>
+    </div>
+
+
+</body>
+</html>

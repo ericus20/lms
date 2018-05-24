@@ -2,6 +2,7 @@ package com.developersboard.lms.utils;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import java.nio.charset.Charset;
 import java.security.SecureRandom;
 import java.util.Random;
 
@@ -17,8 +18,10 @@ public abstract class SecurityUtils {
         throw new AssertionError("Non instantiating class");
     }
 
+    private static final String SALT = "SALT";
+
     public static BCryptPasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder(12, new SecureRandom("SALT".getBytes()));
+        return new BCryptPasswordEncoder(12, getSecureRandom());
     }
 
 
@@ -36,6 +39,11 @@ public abstract class SecurityUtils {
 
         return passwordBuilder.toString();
 
+    }
+
+
+    private static SecureRandom getSecureRandom() {
+        return new SecureRandom(SALT.getBytes(Charset.forName("UTF-8")));
     }
 
 }

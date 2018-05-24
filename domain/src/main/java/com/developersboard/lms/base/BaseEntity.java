@@ -2,6 +2,7 @@ package com.developersboard.lms.base;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
@@ -60,4 +61,20 @@ public abstract class BaseEntity {
 
     @LastModifiedBy
     private String modifiedBy;
+
+    public Date getCreatedAt() {
+        return new Date(createdAt.getTime());
+    }
+
+    public Date getUpdatedAt() {
+        return new Date(updatedAt.getTime());
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = new Date(createdAt.getTime());
+    }
+
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = new Date(updatedAt.getTime());
+    }
 }

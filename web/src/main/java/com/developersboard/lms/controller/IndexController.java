@@ -11,9 +11,22 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class IndexController {
 
-    @GetMapping(value = "/")
+
+    @GetMapping(path = "/")
+    public String root() {
+        return "redirect:/lms";
+    }
+
+    @GetMapping(path = "/lms")
     public String index() {
         return "index";
     }
+
+    @GetMapping(path = "/login")
+    public String login() {
+        return "user/login";
+    }
+
+
 
 }

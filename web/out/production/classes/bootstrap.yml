@@ -4,19 +4,26 @@ spring:
 
   cloud:
     config:
-      label: lms
       username: ericus20
       password: Eo11351450
-      uri: https://hackstreetboys.ddns.net/config
+      discovery:
+        enabled: true
+        service-id: application-config-server
+      label: lms
 
   profiles:
     active: dev
 
 
 
+# Used for Decrypting configuration properties
 encrypt:
   key: afrika
 
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8762/eureka, http://localhost:8761/eureka
 
 
 

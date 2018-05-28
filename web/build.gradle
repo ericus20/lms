@@ -4,7 +4,14 @@ dependencies {
     compile project(':persistence')
     compile('org.springframework.boot:spring-boot-starter-thymeleaf')
     compile('org.thymeleaf.extras:thymeleaf-extras-springsecurity4')
+    compile('org.springframework.boot:spring-boot-starter-mail')
     compile('org.springframework.boot:spring-boot-starter-web')
+
+
+    // Stripe Sdk
+    compile('com.stripe:stripe-java:5.36.0')
+
+    compile('com.squareup.okhttp3:okhttp:3.10.0')
 
 
     // Webjars

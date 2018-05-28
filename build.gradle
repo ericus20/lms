@@ -46,6 +46,9 @@ subprojects {
         compile('org.springframework.boot:spring-boot-starter-actuator')
         compile('org.springframework.boot:spring-boot-starter-security')
         compile('io.pivotal.spring.cloud:spring-cloud-services-starter-config-client')
+        compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')
+        compile('org.springframework.cloud:spring-cloud-starter-netflix-ribbon')
+        compile('org.springframework.cloud:spring-cloud-starter-openfeign')
         runtime('org.springframework.boot:spring-boot-devtools')
         compileOnly('org.projectlombok:lombok')
 

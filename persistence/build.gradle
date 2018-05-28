@@ -2,4 +2,7 @@
 
 dependencies {
     compile project(':domain')
+
+    // Compile Libraries
+    compile files('libs/ojdbc7.jar')
 }
